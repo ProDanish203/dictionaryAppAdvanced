@@ -58,6 +58,7 @@ function App() {
     if(!text.trim()) return reset();
 
     const debounce = setTimeout(() => {
+      setLoading(true)
       dictionaryApi(text);
     }, 1000);
 
